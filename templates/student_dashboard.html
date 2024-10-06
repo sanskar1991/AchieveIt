@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+        <h2>Student Dashboard</h2>
+    </div>
+
+    <!-- User greeting and profile section -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body text-center">
+            <h4 class="card-title">Welcome, {{ current_user.username }}!</h4>
+            <p class="card-text">Let's work towards your academic goals today.</p>
+        </div>
+    </div>
+
+    <!-- Goal and progress section -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Current GPA</h5>
+                    <h3 class="text-primary">3.8</h3>
+                    <p class="text-muted">Maintain or improve to achieve honors.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Total Tasks</h5>
+                    <h3 class="text-warning">12</h3>
+                    <p class="text-muted">You have 3 upcoming deadlines this week.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Study Time Today</h5>
+                    <h3 class="text-success">4 Hours</h3>
+                    <p class="text-muted">Good progress! Keep it up.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subject and tasks section -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h5>Your Subjects and Tasks</h5>
+            <p class="mb-0 text-muted">Below are your assigned tasks. Click on any task to view more details.</p>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                {% for task in tasks %}
+                <div class="col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-header bg-primary text-white">Subject: {{ task.subject_name }}</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Task: {{ task.title }}</h5>
+                            <p class="card-text">Deadline: {{ task.deadline }}</p>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn btn-info">View Task</a>
+                                <a href="#" class="btn btn-success">Mark as Complete</a>
+                                <a href="#" class="btn btn-warning">Request Changes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Motivational section -->
+    <div class="card mt-5 bg-light">
+        <div class="card-body text-center">
+            <h4 class="card-title">"Education is the passport to the future, for tomorrow belongs to those who prepare for it today." - Malcolm X</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}

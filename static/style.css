@@ -1,0 +1,66 @@
+body {
+    background-color: #f5f5f5;
+}
+
+h2, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    height: 70px;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+}
+
+.navbar {
+    height: 70px; /* Set a fixed height for the navbar */
+}
+
+.navbar-logo {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn-success {
+    background-color: #28a745;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+}
+
+.card-body p {
+    font-size: 14px;
+}

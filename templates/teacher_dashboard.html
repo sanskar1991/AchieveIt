@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Teacher Dashboard</h2>
+
+<div class="card mt-4">
+    <div class="card-header">
+        Welcome, {{ current_user.username }}!
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Your Classes</h5>
+        <p class="card-text">Here you can manage your students and tasks.</p>
+
+        <!-- Example of Class Blocks -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header">Class: Mathematics 101</div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">View Students</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header">Class: English Literature</div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">View Students</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-header">Class: Science 101</div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary">View Students</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
